@@ -1,0 +1,32 @@
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Segoe UI";
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .1em;
+  font-weight: bold;
+  color: green;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
