@@ -3,4 +3,5 @@
 <h1>List of Projects </h1>
 1. Calculator <br>
 2. CountDown  <br>
-3. OTP
+3. OTP        <br>
+4. Gsap Cursor Animation 
