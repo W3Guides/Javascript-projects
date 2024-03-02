@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+
+    <div class="cursor-example"></div>
+    <section class="hero-text">
+        <div class="hero-text-content">
+          <h1 class="cursor-scale"> W3_Guides </h1>
+          <h2 class="cursor-scale small"> Cursor Animation </h2>
+        </div>
+      </section>
+</body>
+</html>
+
+<script>
+ let cursor = document.querySelector('.cursor');
+let cursorScale = document.querySelectorAll('.cursor-scale'); 
+let mouseX = 0;
+let mouseY = 0;
+
+gsap.to({}, 0.016, {
+  repeat: -1,
+  onRepeat: function(){
+    gsap.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY,
+      }
+    })
+  }
+});
+
+window.addEventListener('mousemove', (e)=> {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+})
+
+cursorScale.forEach(link => {
+  link.addEventListener('mousemove', ()=> {
+    cursor.classList.add('grow'); 
+    if (link.classList.contains('small')){
+      cursor.classList.remove('grow');
+      cursor.classList.add('grow-small');
+    }
+  });
+  
+  link.addEventListener('mouseleave', ()=> {
+    cursor.classList.remove('grow');
+    cursor.classList.remove('grow-small');
+  });
+})
+
+</script>
