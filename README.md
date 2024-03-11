@@ -4,4 +4,5 @@
 1. Calculator <br>
 2. CountDown  <br>
 3. OTP        <br>
-4. Gsap Cursor Animation 
+4. Gsap Cursor Animation <br>
+5. Notes App
